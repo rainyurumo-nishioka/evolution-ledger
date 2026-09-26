@@ -969,7 +969,7 @@ def create_readme():
 
     content = """# EA Evolution Ledger
 
-EAの進化を記録するための「Evolution Ledger（進化台帳）」です。
+EAの進化を記録するためのEvolution Ledger（進化台帳）です。
 
 ## 目的
 
@@ -986,29 +986,18 @@ EAがどのように作られ、試され、変化し、
 - 実験結果
 - 証拠
 - 評価
-- 完全性を確認するためのハッシュ値
-
-目的は、単に「どのEAが勝ったか」を記録することではありません。
-
-> 何が作られたのか
-> 何が試されたのか
-> 何が失敗したのか
-> 何が残ったのか
-> 何が次へ受け継がれたのか
-
-これらを未来へ残すことを目的とします。
-
+- SHA-256による完全性確認
 
 ## フォルダ構成
 
 ```text
-schema/                 JSONスキーマ
-nodes/                  EAの各バージョン
-experiments/            実験記録
-manifests/              ファイル構成とハッシュ情報
-evidence/               実験結果の証拠
-lineage/                EAの系譜
-ea/                     EA本体とEvolution Ledger情報
-scripts/                自動化スクリプト
-site/                   閲覧用Webサイト
-.github/                GitHub Actionsの設定
+schema/
+nodes/
+experiments/
+manifests/
+evidence/
+lineage/
+ea/
+scripts/
+site/
+.github/
