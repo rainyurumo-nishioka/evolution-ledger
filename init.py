@@ -969,41 +969,46 @@ def create_readme():
 
     content = """# EA Evolution Ledger
 
-EAの進化を記録するためのEvolution Ledger。
+EAの進化を記録するための「Evolution Ledger（進化台帳）」です。
 
-## Concept
+## 目的
 
-Evolution Ledger records:
+Evolution Ledgerでは、EAの単純な成績ランキングではなく、
+EAがどのように作られ、試され、変化し、
+次のEAへ何を受け継いだのかを記録します。
 
-- EA versions
-- parent / child lineage
-- mutations
-- experiments
-- results
-- evidence
-- evaluation
-- integrity hashes
+記録する主な情報：
 
-The goal is not simply to rank EAs.
+- EAのバージョン
+- 親Node・子Nodeの関係
+- 変異内容
+- 実験
+- 実験結果
+- 証拠
+- 評価
+- 完全性を確認するためのハッシュ値
 
-The goal is to preserve:
+目的は、単に「どのEAが勝ったか」を記録することではありません。
 
-> what was created,
-> what was tried,
-> what failed,
-> what remained,
-> and what was inherited.
+> 何が作られたのか
+> 何が試されたのか
+> 何が失敗したのか
+> 何が残ったのか
+> 何が次へ受け継がれたのか
 
-## Structure
+これらを未来へ残すことを目的とします。
+
+
+## フォルダ構成
 
 ```text
-schema/
-nodes/
-experiments/
-manifests/
-evidence/
-lineage/
-ea/
-scripts/
-site/
-.github/
+schema/                 JSONスキーマ
+nodes/                  EAの各バージョン
+experiments/            実験記録
+manifests/              ファイル構成とハッシュ情報
+evidence/               実験結果の証拠
+lineage/                EAの系譜
+ea/                     EA本体とEvolution Ledger情報
+scripts/                自動化スクリプト
+site/                   閲覧用Webサイト
+.github/                GitHub Actionsの設定
